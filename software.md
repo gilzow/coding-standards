@@ -2,6 +2,25 @@
 
 ## [CodeKit](http://incident57.com/codekit/)
 
-**Compile Everything:** Process Less, Sass, Stylus, Jade, Haml, Slim, CoffeeScript, Javascript and Compass files automatically each time you save. Easily set options for each language.
+Process, combine & minify: Less, Sass, Stylus, Jade, Haml, Slim, CoffeeScript, Javascript and Compass files.
 
-**Combine & Minify:** Reduce load times by mashing Javascript & CoffeeScript files together and then minifying with Uglify.js. It's so easy, you'll giggle like a schoolgirl. Seriously.
+## [Git Tower](http://www.git-tower.com/)
+
+The most powerful Git client for your Mac.
+
+## [SourceTree](http://www.sourcetreeapp.com/)
+
+A free Git & Mercurial client for Windows or Mac.
+
+## [Coda](https://panic.com/coda/)
+
+A nice code editor for Mac.
+
+## [Transmit](http://panic.com/transmit/)
+
+A nice FTP client for Mac.
+
+## [YummyFTP](http://www.yummysoftware.com/)
+
+A cheap, decent FTP client for Mac.
+
