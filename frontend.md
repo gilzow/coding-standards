@@ -9,7 +9,7 @@ Structure your files to help keep things tidy for the backend people.
 		- styles
 			- less/sass (source)
 			- css (compiled/minified code)
-				- screen.css
+				- style.css
 			- fonts 
 		
 		- scripts
@@ -17,7 +17,8 @@ Structure your files to help keep things tidy for the backend people.
 			- min (compiled/minified code)
 				- script.js
 		
-		- images
-			- template (images needed for the site template)
+		- images (images needed for the site template)
+			
+		- uploads (images uploaded into the CMS, if needed )
 
 
