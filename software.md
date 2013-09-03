@@ -1,25 +1,39 @@
 # Software to get the job done
 
+## Front End Development
+
 _Mac evnoronment_
 
-## Graphics
+### Graphics
 * Photoshop
 * Illustrator
 * [Sketch](http://www.bohemiancoding.com/sketch/)
 
-## Code
+### Code
 * [Coda](http://panic.com/coda/)
 * [BBEdit](http://www.barebones.com/products/bbedit/)
 
-## Code Compiler
+### Code Compiler
 * [CodeKit](http://incident57.com/codekit/)
 * [Hammer](http://hammerformac.com/)
 
-## Git
+### Git
 * [Source Tree](http://www.sourcetreeapp.com/)
 * [Tower](http://www.git-tower.com/)
 
-## FTP
+### FTP
 * [Cyberduck](http://cyberduck.ch/)
 * [YummyFTP](http://www.yummysoftware.com/)
 * [Transmit](http://panic.com/transmit/)
+
+### Email
+* Apple Mail
+* Microsoft Outlook
+
+### Office Software
+* Microsoft Office
+* iWork
+
+### Video Editing
+* iMovie
+* Final Cut Pro X
