@@ -1,29 +1,25 @@
 # Software to get the job done
 
-## [CodeKit](http://incident57.com/codekit/)
+_Mac evnoronment_
 
-Process, combine & minify: Less, Sass, Stylus, Jade, Haml, Slim, CoffeeScript, Javascript and Compass files.
+## Graphics
+* Photoshop
+* Illustrator
+* [Sketch](http://www.bohemiancoding.com/sketch/)
 
-## [Git Tower](http://www.git-tower.com/)
+## Code
+* [Coda](http://panic.com/coda/)
+* [BBEdit](http://www.barebones.com/products/bbedit/)
 
-The most powerful Git client for your Mac.
+## Code Compiler
+* [CodeKit](http://incident57.com/codekit/)
+* [Hammer](http://hammerformac.com/)
 
-## [SourceTree](http://www.sourcetreeapp.com/)
+## Git
+* [Source Tree](http://www.sourcetreeapp.com/)
+* [Tower](http://www.git-tower.com/)
 
-A free Git & Mercurial client for Windows or Mac.
-
-## [Coda](https://panic.com/coda/)
-
-A nice code editor for Mac.
-
-## [Transmit](http://panic.com/transmit/)
-
-A nice FTP client for Mac.
-
-## [YummyFTP](http://www.yummysoftware.com/)
-
-A cheap, decent FTP client for Mac.
-
-## [Sketch](http://www.bohemiancoding.com/sketch/)
-
-Sketch is a professional vector graphics app with a beautiful interface and powerful tools.
+## FTP
+* [Cyberduck](http://cyberduck.ch/)
+* [YummyFTP](http://www.yummysoftware.com/)
+* [Transmit](http://panic.com/transmit/)
