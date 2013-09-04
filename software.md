@@ -2,7 +2,7 @@
 
 ## Front End Development
 
-_Mac evnoronment_
+_Mac environment_
 
 ### Graphics
 * Photoshop
