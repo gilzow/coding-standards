@@ -1,3 +1,6 @@
+Table of Contents
+9. [Inline Documentation](#inlinedocs)
+
 # 4. Coding Style #
 ## 4.1 Strings ##
 ### 4.1.1 String Literals ###
@@ -321,11 +324,11 @@ class SampleException extends Exception
 ?>
 ```
 
-## 4.9 Inline Documentation ##
+## 4.9 Inline Documentation ## {#inlinedocs}
 ### 4.9.1 Format ###
 * Documentation blocks **MUST** be compatible with phpDoc format (http://phpdoc.org/).
 * In addition to docblocks, inline documentation **MAY** be used anywhere in the code
-    * single line comments **SHOULD** use C++ style comments (`//`)
+    * Single line comments **SHOULD** use C++ style comments (`//`)
     * Multiline comments **MUST** use block comments (C style `/* */`)
 
 ```
@@ -345,8 +348,8 @@ class SampleException extends Exception
 * Every file containing PHP code **MUST** have a docblock at the top of the file.
 * Each file docblock **MUST** contain:
     * Short description
-    * `@author` <author>, Web Communications, University of Missouri
-    * `@copyright` <year> Curators of the University of Missouri
+    * `@author <author>, Web Communications, University of Missouri`
+    * `@copyright <year> Curators of the University of Missouri`
 * Each file docblock **SHOULD** contain:
     * Long description
     * `@version`
