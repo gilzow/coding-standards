@@ -168,7 +168,8 @@ class ExampleClass
 	protected $strLogFile = null;
 	private $_boolLog = false;
 
-    public function __construct($aryOptions) {
+    public function __construct($aryOptions)
+    {
 		$this->_setConfigurations($aryOptions);
 	}
 }
@@ -195,7 +196,7 @@ class ExampleClass
 
     public function __construct($aryOptions)
     {
-        $this->_setConfigurations($aryOptions;
+        $this->_setConfigurations($aryOptions);
     }
 
     public function exampleMethod($aryArg1, $aryArg2)
