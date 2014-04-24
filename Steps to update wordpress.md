@@ -39,13 +39,13 @@ The following is the uber-paranoid method of updating wordpress sites on our cam
      For the account muuawebdevjobs it would be
 
      ```
-     scp -r www/ muuawebdevjobs.missouri.edu:/sites/muuawebdevjobs
+     scp -r www/ muuawebdevjobs@vh-dev.missouri.edu:/sites/muuawebdevjobs
      ```
      
      scp stands for Secure CoPy and will securely transfer our files between vh.missouri.edu and vh-dev.missouri.edu. [scp syntax](http://www.hypexr.org/linux_scp_help.php)
 
 15. Type in the account password
-16. Veryify that scp didn't report any errors. If there were errors, google is your savior.  Or contact the assistant director or the assistant-to-the-assistant director.
+16. Verify that scp didn't report any errors. If there were errors, google is your savior.  Or contact the assistant director or the assistant-to-the-assistant director.
 17. In SFTP, verify the new files are all there
 18. Rename the new wp-config.php file to wp-config-prod.php
 19. Rename the wp-config-orig.php file back to wp-config.php
