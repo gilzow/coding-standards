@@ -1,6 +1,3 @@
-Table of Contents
-9. [Inline Documentation](#inlinedocs)
-
 # 4. Coding Style #
 ## 4.1 Strings ##
 ### 4.1.1 String Literals ###
@@ -325,7 +322,6 @@ class SampleException extends Exception
 ```
 
 ## 4.9 Inline Documentation ##
-<a name="inlinedocs"></a>
 ### 4.9.1 Format ###
 * Documentation blocks **MUST** be compatible with phpDoc format (http://phpdoc.org/).
 * In addition to docblocks, inline documentation **MAY** be used anywhere in the code
