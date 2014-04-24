@@ -325,8 +325,8 @@ class SampleException extends Exception
 ### 4.9.1 Format ###
 * Documentation blocks **MUST** be compatible with phpDoc format (http://phpdoc.org/).
 * In addition to docblocks, inline documentation **MAY** be used anywhere in the code
-    * single line comments **SHOULD** use C++ style comments (//)
-    * Multiline comments **MUST** use block comments (C style /* */)
+    * single line comments **SHOULD** use C++ style comments (`//`)
+    * Multiline comments **MUST** use block comments (C style `/* */`)
 
 ```
 #!php5
