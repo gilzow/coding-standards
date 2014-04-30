@@ -230,12 +230,14 @@ $objSample->exampleMethod($aryArg1, $aryArg2);
 ?>
 ```
 
-## 4.7 Control Statements ##
-* Control statements **MUST** use the logical operators '&&' and '||'
+## 4.7 Control Structures ##
+* Control structures **MUST** use the logical operators '&&' and '||' in their conditional declaration
+* Control structures **MUST** use braces to enclose statement groups.
+* [Alternative syntax for control structures](http://www.php.net/manual/en/control-structures.alternative-syntax.php) **MAY** be used in views/templates, but **MUST** use end statements.
 * The opening brace **MUST** be written on the same line as the conditional statement if the conditional statement does not contain a line feed.
 * The closing brace **MUST** be written on its own line.
 * Opening parentheses for control structures **MUST NOT** have a space after them, and closing parentheses for control structures **MUST NOT** have a space before.
-* Any content within the braces **MUST** be indented  four spaces from the control statement.
+* Any content within the braces **MUST** be indented four spaces from the control statement.
 * Within the conditional statements between the parentheses, operators **MUST** be separated by spaces for readability.
 * Control statements **SHOULD** use Yoda notation.
 * Inner parentheses **SHOULD** be used to improve logical grouping for larger conditional expressions.
