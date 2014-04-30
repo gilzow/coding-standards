@@ -296,6 +296,7 @@ switch($intFoo){
 ## 4.7.2 Ternary operators ##
 * Ternary operators **MAY** be used but **MUST** adhere to the same requirements for other control statements.
 * Ternary operators **SHOULD NOT** be nested.
+* Ternary operations **MUST** enclose the condition in parentheses.
 ```
 #!php5
 <?php
