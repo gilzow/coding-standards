@@ -26,6 +26,24 @@ The following is the uber-paranoid method of updating wordpress sites on our cam
 7. Once tar finishes, verify there were no errors and that the backup exists. If there were errors, google is your savior.  Or contact the assistant director or the assistant-to-the-assistant director.
 8. Download the new backup (save somewhere locally where you can locate it easily)
 9. In the SSH session, cd back up one level to /sites/<accountname>
+
+Change steps 10-19 to use rsync instead?
+new 10. Type in
+
+```
+rsync -a --progress --exclude='www/wp-config.php' www <accountname>@vh-dev.missouri.edu:/sites/<accountname>/
+```
+
+For the account muuawebdevjobs it would be
+
+```
+rsync -a --progress --exclude='www/wp-config.php' www muuawebdevjobss@vh-dev.missouri.edu:/sites/muuawebdevjobs/
+```
+
+new 11. Type in the account password
+new 12. Verify rsync didn't report any errors. If there were errors, google is your savior.  Or contact the assistant director or the assistant-to-the-assistant director.
+remove steps 13-19.
+
 10. SFTP into vh-dev.missouri.edu
 11. Change to wordpress location
 12. Change the name of wp-config.php to wp-config-orig.php (or whatever you like)
