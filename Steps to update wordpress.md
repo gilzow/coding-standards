@@ -38,7 +38,7 @@ rsync -a --progress --exclude='www/wp-config.php' www <accountname>@vh-dev.misso
 For the account muuawebdevjobs it would be
 
 ```
-rsync -a --progress --exclude='www/wp-config.php' www muuawebdevjobss@vh-dev.missouri.edu:/sites/muuawebdevjobs/
+rsync -a --progress --exclude='www/wp-config.php' www muuawebdevjobs@vh-dev.missouri.edu:/sites/muuawebdevjobs/
 ```
 
 new 11. Type in the account password
