@@ -28,6 +28,7 @@ The following is the uber-paranoid method of updating wordpress sites on our cam
 9. In the SSH session, cd back up one level to /sites/<accountname>
 
 Change steps 10-19 to use rsync instead?
+
 new 10. Type in
 
 ```
