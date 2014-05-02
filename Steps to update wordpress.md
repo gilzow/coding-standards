@@ -32,6 +32,7 @@ Change steps 10-19 to use rsync instead?
 new 10. Type in
 
 ```
+#!bash
 rsync -a --progress --exclude='www/wp-config.php' www <accountname>@vh-dev.missouri.edu:/sites/<accountname>/
 ```
 
