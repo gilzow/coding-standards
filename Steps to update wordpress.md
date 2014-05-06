@@ -31,25 +31,27 @@ Change steps 10-19 to use rsync instead?
 
 new 10. Type in
 
-```
-rsync -a --progress --exclude='www/wp-config.php' www <accountname>@vh-dev.missouri.edu:/sites/<accountname>/
-```
+    ```
+    #!bash
+    rsync -a --progress --exclude='www/wp-config.php' www <accountname>@vh-dev.missouri.edu:/sites/<accountname>/
+    ```
 
 For the account muuawebdevjobs it would be
 
-```
-rsync -a --progress --exclude='www/wp-config.php' www muuawebdevjobs@vh-dev.missouri.edu:/sites/muuawebdevjobs/
-```
+    ```
+    #!bash
+    rsync -a --progress --exclude='www/wp-config.php' www muuawebdevjobs@vh-dev.missouri.edu:/sites/muuawebdevjobs/
+    ```
 
 new 11. Type in the account password
 new 12. Verify rsync didn't report any errors. If there were errors, google is your savior.  Or contact the assistant director or the assistant-to-the-assistant director.
 remove steps 13-19.
 
-10. SFTP into vh-dev.missouri.edu
-11. Change to wordpress location
-12. Change the name of wp-config.php to wp-config-orig.php (or whatever you like)
-13. Delete everything except wp-config-orig.php (this assumes that all development work you are doing is managed via GIT)
-14. in your SSH session to vh.missouri.edu, type in 
+old 10. SFTP into vh-dev.missouri.edu
+old 11. Change to wordpress location
+old 12. Change the name of wp-config.php to wp-config-orig.php (or whatever you like)
+old 13. Delete everything except wp-config-orig.php (this assumes that all development work you are doing is managed via GIT)
+old 14. in your SSH session to vh.missouri.edu, type in
 
      ```
      scp -r <path-to-wordpress> <account>@vh-dev.missouri.edu
@@ -63,11 +65,12 @@ remove steps 13-19.
      
      scp stands for Secure CoPy and will securely transfer our files between vh.missouri.edu and vh-dev.missouri.edu. [scp syntax](http://www.hypexr.org/linux_scp_help.php)
 
-15. Type in the account password
-16. Verify that scp didn't report any errors. If there were errors, google is your savior.  Or contact the assistant director or the assistant-to-the-assistant director.
-17. In SFTP, verify the new files are all there
-18. Rename the new wp-config.php file to wp-config-prod.php
-19. Rename the wp-config-orig.php file back to wp-config.php
+old 15. Type in the account password
+old 16. Verify that scp didn't report any errors. If there were errors, google is your savior.  Or contact the assistant director or the assistant-to-the-assistant director.
+old 17. In SFTP, verify the new files are all there
+old 18. Rename the new wp-config.php file to wp-config-prod.php
+old 19. Rename the wp-config-orig.php file back to wp-config.php
+
 20. Launch MySQLWorkbench and log into the admin account for the site
 21. Go to **Data Export**
 22. Select the site's schema and confirm that all of the wordpress tables are selected

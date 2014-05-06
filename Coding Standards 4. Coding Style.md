@@ -349,11 +349,14 @@ class SampleException extends Exception
 * Every file containing PHP code **MUST** have a docblock at the top of the file.
 * Each file docblock **MUST** contain:
     * Short description
+    * `@package Package/Project the file belongs to`
     * `@author <author>, Web Communications, University of Missouri`
     * `@copyright <year> Curators of the University of Missouri`
 * Each file docblock **SHOULD** contain:
     * Long description
     * `@version`
+* File docblocks **MAY** contain:
+    * `@subpackage`
 
 ```
 #!php5
@@ -368,7 +371,12 @@ class SampleException extends Exception
 ?>
 ```
 ### 4.9.3 Classes ###
-In addition to the file docblock, each class **MUST** have a docblock that contains a Long description.
+* In addition to the file docblock, each class **MUST** have a docblock that contains:
+    * A long description.
+    * `@package Package/Project the class belongs to`
+* Class docblocks **MAY** contain:
+    * `@subpackage`
+    * `@version` if different than or if not included in the file docblock.
 ### 4.9.4 Functions/methods ###
 * Every function/method **MUST** have a docblock that contains:
     * Short description
