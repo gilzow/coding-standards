@@ -80,7 +80,7 @@ $arySample = array(
 
 ### 4.2.2 Associative Arrays ###
 * Associative arrays **SHOULD** be broken into multiple lines.
-* Each successive line **MUST** be indented such that both keys and values are aligned.
+* Each successive line **SHOULD** be indented such that both keys and values are aligned.
 * "=>" operators **SHOULD** be indented such that they align.
 * Alternatively, the initial array item **MAY** begin on the following line.
     * Each successive line **MUST** be indented one indentation level greater than the line containing the array declaration.
