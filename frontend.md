@@ -10,8 +10,8 @@ Structure your files to help keep things tidy for the backend people.
           - js 
           - images (PSD, AI, Sketch files)
 		
-     - dist (Published files or Cascade Server files)
-           - css
+     - dist (Compiled files to publish on VH, Wordpress or Cascade Server files)
+          - css
           - fonts 
           - js 
           - images 
