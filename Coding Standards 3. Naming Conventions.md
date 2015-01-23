@@ -97,7 +97,7 @@ class CalendarException extends Exception
 ?>
 ```
 
-## 3.7 Functions and Methods ##
+## 3.8 Functions and Methods ##
 * Functions/Methods **MUST** contain only alphanumeric characters.
 * Functions/Methods **MUST NOT** contain underscores.
 * Class methods that are declared protected or private **MAY** start an underscore
@@ -111,7 +111,11 @@ function getData()
 {
     //code
 }
-
+?>
+```
+```
+#!php5
+<?php
 class ExampleClass
 {
 
@@ -129,7 +133,7 @@ class ExampleClass
 ?>
 ```
 
-## 3.8 Variables ##
+## 3.9 Variables ##
 * Variable **MUST** contain only alphanumeric characters.
 * Variables **MUST NOT** contain underscores.
 * Class members that are declared protected or private **MAY** contain an underscore as the first character
@@ -182,7 +186,7 @@ $mCase      = reset($aValues);
 ?>
 ```
 
-## 3.9 Constants ##
+## 3.10 Constants ##
 * Constants **MAY** contain both alphanumeric characters and underscores.
 * All letters **MUST** be capitalized and words **MUST** be separated by underscores.
 * Constants **MUST** be defined as class members with the "const" modifier.
