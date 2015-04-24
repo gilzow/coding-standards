@@ -84,3 +84,5 @@ old 19. Rename the wp-config-orig.php file back to wp-config.php
 29. Visit the site and verify things look ok
 30. Run a link check and verify that there are no broken internal links
 31. Fix any broken external links, or assign to the appropriate party
+
+If you run into an ssl cert issue while upgrading a multinetwork site, [this page](https://wordpress.org/support/topic/failed-update-network-attempt-after-upgrading-to-341) 
