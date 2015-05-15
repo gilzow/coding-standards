@@ -7,7 +7,7 @@
 7. Click *Yes* for **Enable Directory Authentication**
 8. Click *Yes* for **Require SSL Login**  -- Note -- unless you are on -dev and don't have an ssl cert set up yet. HOWEVER, you must have ssl set up before moving to production
 9. Select *Use TLS* for **Enable SSL Connectivity?**
-10. For **Directory Servers (Domain Controllers)**, enter in "ldap.missouri.edu:3268:"
+10. For **Directory Servers (Domain Controllers)**, enter in "col.missouri.edu:3268:"
 11. Leave **Account Filter** as "samAccountName"
 12. Leave **Account Suffix** blank
 13. Leave **Base DN** blank
