@@ -89,6 +89,6 @@ If you run into an ssl cert issue while upgrading a multinetwork site, [this pag
 
 If after upgrading a multisite, the dashboard becomes extremely sluggish, run the following SQL on your database:
 ```
-SELECT * FROM coe_wp_options where option_name = 'db_version';
+SELECT * FROM wp_options where option_name = 'db_version';
 ```
 Check the returned value against the [db version number for the wordpress version you just upgraded to] (http://codex.wordpress.org/WordPress_Versions). If there is a mismatch, update the value in the database to the correct version. This should fix the sluggishness. 
