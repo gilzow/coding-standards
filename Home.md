@@ -17,6 +17,5 @@ Stuff Webcom web developers need to know about.
 ## Guides/How-To
 * [Steps to update wordpress](Steps to update wordpress.md)
 * [wpDirAuth set up instructions](wpDirAuth set up instructions.md)
-* [Wordpress .htaccess changes](Wordpress .htaccess changes.md)
-* [Set up Sucuri Security wordpress plugin](Set up Sucuri Security wordpress plugin.md)
+* [Harden Wordpress](Steps%20to%20hardening%20wordpress.md)
 * [Set up Git publishing on VH](http://uablogs.missouri.edu/interface/2012/09/using-git-to-manage-your-site-on-vh/)
