@@ -14,7 +14,7 @@
         * `add_filter('xmlrpc_enabled', '__return_false');`
     2. Remove the wordpress generator meta information
         * `remove_action( 'wp_head', 'wp_generator' );`
-    3. [Prevent remote attackers from enumerating user names](Prevent remote attackers from enumerating user.md)
+    3. [Prevent remote attackers from enumerating user names](Prevent%20remote%20attackers%20from%20enumerating%20user%20names.md)
 4. [Make .htaccess changes](Wordpress .htaccess changes.md)
 5. [Install and configure the Sucuri Security plugin](Set up Sucuri Security wordpress plugin.md)
 
