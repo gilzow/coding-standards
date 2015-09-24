@@ -18,4 +18,6 @@
 4. [Make .htaccess changes](Wordpress .htaccess changes.md)
 5. [Install and configure the Sucuri Security plugin](Set up Sucuri Security wordpress plugin.md)
 
+If you would prefer not to use the Sucuri Security plugin, please delete the **readme.html** file from the root of the wordpress install, and [make these additional .htaccess changes](Additional%20.htaccess%20changes.md).
+
 **NOTE**: All of the items in Step 3 above are already incorporated into v3 of the MizzouMVC framework. If you are using the framework, you do not need to add them to your functions file. 
