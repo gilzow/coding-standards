@@ -1,7 +1,4 @@
-1. Change the admin account user name
-    * Create a second user account that you'll use for admin tasks and then delete the 'admin' account (ideal) OR
-    * Go into the database and change the user_login for 'admin' to something else
-2. In wp-config.php 
+1. In wp-config.php 
     1. change the $table_prefix from 'wp_' to something else BEFORE you install wordpress
     2. Update the Unique Keys and Salts
         1.  visit https://api.wordpress.org/secret-key/1.1/salt/
@@ -9,6 +6,9 @@
         3. Scroll down to `/* That's all, stop editing! Happy blogging. */`. Right before that line, add the following `define('DISALLOW_FILE_EDIT', TRUE);`
     3. Save the file.
     4. Now change the permissions on wp-config.php to 0400 (owner-readable only)
+2. Change the admin account user name
+    * Create a second user account that you'll use for admin tasks and then delete the 'admin' account (ideal) OR
+    * Go into the database and change the user_login for 'admin' to something else
 3. In your functions file for your theme, do the following (see note below):
     1. Remove XMLRPC support
         * `add_filter('xmlrpc_enabled', '__return_false');`
