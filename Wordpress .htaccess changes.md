@@ -11,6 +11,7 @@ In the .htaccess file in the root of wordpress, add the following to the top of 
  allow from 128.206.
  allow from 161.130.
  allow from 10.7.
+ allow from 10.8.
 </Files>
 
 # completely disable xmlrpc
@@ -36,4 +37,5 @@ deny from all
 allow from 128.206.
 allow from 161.130.
 allow from 10.7.
+allow from 10.8.
 ```
