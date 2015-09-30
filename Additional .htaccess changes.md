@@ -1,4 +1,4 @@
-In both wp-content create an .htaccess file and the following in it
+In wp-content create an .htaccess file and add the following in it
 
 ```
 #!
@@ -14,7 +14,7 @@ In both wp-content create an .htaccess file and the following in it
 </FilesMatch>
 ```
 
-In wp-includes create and .htaccess file and the following in it
+In wp-includes create an .htaccess file and add the following in it
 
 
 ```
