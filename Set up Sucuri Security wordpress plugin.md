@@ -34,5 +34,7 @@
 22. Add the following entries: 
     * 128.206.0.0/16
     * 161.130.0.0/16
+    * 10.7.0.0/16
+    * 10.8.0.0/16
 
 That's it.  At this point, it wouldn't hurt to click the Malware Scan tab and run a scan
