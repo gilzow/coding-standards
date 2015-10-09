@@ -1,6 +1,11 @@
 ```
 #!php
-
+/**
+ * Blocks remote attackers from enumerating user names
+ * @param $strRedirectionURL
+ * @param $strRequestedURL
+ * @return mixed
+ */
 function scanForEnumerationAttempt($strRedirectionURL, $strRequestedURL) {
 	if (1 === preg_match('/\?author=([\d]*)/', $strRequestedURL)) {
 		$strRedirectionURL = false;
