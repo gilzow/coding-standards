@@ -9,12 +9,17 @@
 2. Change the admin account user name
     * Create a second user account that you'll use for admin tasks and then delete the 'admin' account (ideal) OR
     * Go into the database and change the user_login for 'admin' to something else
-3. In your functions file for your theme, do the following (see note below):
-    1. Remove XMLRPC support
-        * `add_filter('xmlrpc_enabled', '__return_false');`
-    2. Remove the wordpress generator meta information
-        * `remove_action( 'wp_head', 'wp_generator' );`
-    3. [Prevent remote attackers from enumerating user names](Prevent%20remote%20attackers%20from%20enumerating%20user%20names.md)
+3. Turn off xmlrpc, remove version number and reduce user enumeration
+    1. Install the [Further Security Enhancements plugin](https://bitbucket.org/muwebcom/mizzou-further-security-enhancements)
+        1. Create the directory 'mu-plugins' in `/wp-contents/` if it doesn't already exist
+        2. Upload *further-security-enhancements.php* into the mu-plugins directory
+        3. That's it; you're done.  The plugin will automatically load.
+    2. In your functions file for your theme, do the following (see note below):
+        1. Remove XMLRPC support
+            * `add_filter('xmlrpc_enabled', '__return_false');`
+        2. Remove the wordpress generator meta information
+            * `remove_action( 'wp_head', 'wp_generator' );`
+        3. [Prevent remote attackers from enumerating user names](Prevent%20remote%20attackers%20from%20enumerating%20user%20names.md)
 4. [Make .htaccess changes](Wordpress .htaccess changes.md)
 5. [Install and configure the Sucuri Security plugin](Set up Sucuri Security wordpress plugin.md)
 
