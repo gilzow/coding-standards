@@ -14,7 +14,7 @@
         1. Create the directory 'mu-plugins' in `/wp-contents/` if it doesn't already exist
         2. Upload *further-security-enhancements.php* into the mu-plugins directory
         3. That's it; you're done.  The plugin will automatically load.
-    2. In your functions file for your theme, do the following (see note below):
+    2. If you don't want to use the plugin, in your functions file for your theme, do the following (see note below):
         1. Remove XMLRPC support
             * `add_filter('xmlrpc_enabled', '__return_false');`
         2. Remove the wordpress generator meta information
