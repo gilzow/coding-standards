@@ -18,4 +18,4 @@ Stuff Webcom web developers need to know about.
 * [Steps to update wordpress](Steps to update wordpress.md)
 * [wpDirAuth set up instructions](wpDirAuth set up instructions.md)
 * [Harden Wordpress](Steps%20to%20hardening%20wordpress.md)
-* [Set up Git publishing on VH](http://uablogs.missouri.edu/interface/2012/09/using-git-to-manage-your-site-on-vh/)
+* [Set up Git publishing on Departmental Web Hosting](https://bitbucket.org/muwebcom/vh-repo-creator/overview/)
