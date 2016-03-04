@@ -22,3 +22,5 @@ Alternatively, you could specifically exclude certain folders and files:
 !README.md
 !src/*
 ```
+
+`/*` creates an initial pool of all files, and then the following lines remove the `gulpfile.js`, `README.md`, and `src/` folder respectively.
