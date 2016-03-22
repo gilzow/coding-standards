@@ -20,3 +20,4 @@ Stuff Webcom web developers need to know about.
 * [Harden Wordpress](Steps%20to%20hardening%20wordpress.md)
 * [Set up Git publishing on Departmental Web Hosting](https://bitbucket.org/muwebcom/vh-repo-creator/overview/)
 * [Selective Git publishing with sparse-checkout](Selective Git publishing with sparse-checkout.md)
+* [How to check quota on WH](How to check quota on WH.md)
