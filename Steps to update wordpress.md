@@ -25,11 +25,11 @@ The following is the uber-paranoid method of updating wordpress sites on our cam
 
 7. Once tar finishes, verify there were no errors and that the backup exists. If there were errors, google is your savior.  Or contact the assistant director or the assistant-to-the-assistant director.
 8. Download the new backup (save somewhere locally where you can locate it easily)
-9. In the SSH session, cd back up one level to /sites/<accountname>
+9. In the SSH session, cd back up one level to  /var/www/html/<domain>.missouri.edu/
 10. Type in
 
     ```
-    rsync -a --progress --exclude='www/wp-config.php' www <accountname>@vh-dev.missouri.edu:/sites/<accountname>/
+    rsync -a --progress --exclude='www/wp-config.php' www <accountname>@col.missouri.edu@wh-dev-01-mgmt.missouri.edu:/var/www/html/<domain>.missouri.edu/
     ```
 
     For the account muuawebdevjobs it would be
