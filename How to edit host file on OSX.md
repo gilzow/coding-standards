@@ -15,4 +15,4 @@
 15. If for some reason you are still going to the copy of the site on WH, you might need to flush your cache.  Back in Terminal, type in: `sudo dscacheutil -flushcache` 
 16. Press **Enter** 
 17. Type in your password and press **Enter**, if prompted
-18. Hard refresh your browser. If you are *still* not seeing the vagrant copy, it's possible your browser has cached the dns entry and is stubbornly refusing to let it go.  
+18. Hard refresh your browser. If you are *still* not seeing the vagrant copy, it's possible your browser has cached the dns entry and is stubbornly refusing to let it go.  See [How to reset browser DNS Cache](How%20to%20flush%20browser%20DNS%20cache)
