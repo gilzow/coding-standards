@@ -8,7 +8,7 @@
 8. Press **Enter** to create a new line.
 9. Type in `127.0.0.1`
 10. Press **Tab**
-11. Enter in the domain of the site you are going to work on
+11. Enter in the domain of the site you are going to work on (e.g. *admissions-wh-dev.missouri.edu*)
 12. Press the **Esc** key (this will remove you from edit mode)
 13. Type in `:x` and press **Enter**. This will save and exit the file
 14. Now when you go to the domain you entered in step 11 into your browser, you'll go to the copy of the site running in vagrant. 
