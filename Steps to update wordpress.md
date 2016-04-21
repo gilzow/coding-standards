@@ -1,25 +1,25 @@
-The following is the uber-paranoid method of updating wordpress sites on our campus.  This process will generate one backup on the site itself, one backup on your local machine, a clone of the site on the development server and a backup of the site's database .  This way, if ANY thing happens during or after the upgrade/update, you can quickly revert back to the previous state.
+The following is the uber-paranoid method of updating wordpress sites on our campus.  This process will generate one backup on the site itself, one backup on your local machine, a clone of the site on the development server and a backup of the site's database .  This way, if ANY thing happens during or after the upgrade/update, you can quickly revert back to the previous state. These instructions assume your site is on the new departmental web host, commonly referred to as WH.
 
-1. Log into the account via ssh and sftp to vh.missouri.edu
-2. In both SSH and SFTP, move to /sites/<accountname>
+1. Log into the account via ssh and sftp
+2. In both SSH and SFTP, move to `/var/www/html/<yourdomain>.missouri.edu` (where <yourdomain> is the domain of the site)
 3. In SSH, cd into backups (if there isn't a backups directory, create it)
 4. Download previous backup if you havent already (if applicable)
 5. Delete previous backup (if applicable)
 6. In SSH type in:
 
      ```
-     tar -zcf <date>.tar.gz /sites/<accountname>/<path-to-wordpress>
+     tar -zcf <date>.tar.gz /var/www/html/<yourdomain>.missouri.edu/<path-to-wordpress>/
      ```
 
      For the account muuawebdevjobs it would be
 
      ``` 
-     tar -zcf 20130926.tar.gz /sites/muuawebdevjobs/www
+     tar -zcf 20130926.tar.gz /var/www/html/webdevjobs.missouri.edu/www/`
      ```
      
-     tar is a linux archive program and will create the archive of our wordpress site. [tar manual](http://www.ss64.com/bash/tar.html). If by chance you need to exclude a directory, you can use *--exclude=/path/to/file*. Using our example above, if we needed to backup everything in /sites/muuawebdevjobs/ except the backup directory, we would do
+     tar is a linux archive program and will create the archive of our wordpress site. [tar manual](http://www.ss64.com/bash/tar.html). If by chance you need to exclude a directory, you can use *--exclude=/path/to/file*. Using our example above, if we needed to backup everything in the WebDevJobs account except the backup directory, we would do
      ```
-     tar -zcf 20131011.tar.gz /sites/muuawebdevjobs --exclude=/sites/muuawebdevjobs/backup
+     tar -zcf 20131011.tar.gz /var/www/html/webdevjobs.missouri.edu/ --exclude=/var/www/html/webdevjobs.missouri.edu//backup
      ```
 
 
