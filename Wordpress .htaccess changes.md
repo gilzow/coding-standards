@@ -39,3 +39,26 @@ allow from 161.130.
 allow from 10.7.
 allow from 10.8.
 ```
+
+In /wp-includes/ add (or edit, if applicable) an .htaccess file and add the following:
+
+```
+#!bash
+<FilesMatch "\.(?i:php)$">
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+</FilesMatch>
+<Files (wp-tinymce|ms-files).php>
+  <IfModule !mod_authz_core.c>
+    Allow from all
+  </IfModule>
+  <IfModule mod_authz_core.c>
+    Require all granted
+  </IfModule>
+</Files>
+```
