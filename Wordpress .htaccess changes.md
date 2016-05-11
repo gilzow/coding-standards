@@ -53,12 +53,12 @@ In /wp-includes/ add (or edit, if applicable) an .htaccess file and add the foll
     Require all denied
   </IfModule>
 </FilesMatch>
-<Files (wp-tinymce|ms-files).php>
+<FilesMatch "^(wp-tinymce|ms-files).php$">
   <IfModule !mod_authz_core.c>
     Allow from all
   </IfModule>
   <IfModule mod_authz_core.c>
     Require all granted
   </IfModule>
-</Files>
+</FilesMatch>
 ```
