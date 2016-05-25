@@ -62,3 +62,17 @@ These instructions make several assumptions:
 If this the first time you've cloned the site to this server (as discussed in step 3), see the additional instructions below for adjusting `wp-config.php`.  If not, then the development site should now be an exact clone of your production site.  
 
 If you are cloning to a new server, or if this is the first time to clone to development, log into the development server and change the value for `DB_HOST` in `wp-config.php` to the development instance of the database. If this is a multisite, you will also need to change the value for `DOMAIN_CURRENT_SITE` to the development domain of the site.  Once you've done this, save the file.  Your development site should now be ready.   
+
+Had a really good one today and want to record it in case we need it again for future use.  Needed to update internal links from http to https for a site, but the domain wasn't changing.  In addition, I found some instances of a serialized object that included the domain, but it wasn't a part of the beginning of a string:
+
+
+```
+s:121:\"http://blogsearch.google.com/blogsearch?scoring=d&partner=wordpress&q=link:http://mizzouadvantage.missouri.edu/education/\";
+```
+
+So the previous regex wasn't catching it.  Updated the regex in step 12 above to account for it.  In order to do the regex replace in vim, I had to use the following:
+
+```
+%s@s:\(\d\+\):\([\\]\?\)"\([^"]*\)http\=://\(mizzouadvantage\)\.missouri\.edu@\='s:' . (submatch(1) + 1). ':'. submatch(2) . '"'. submatch(3) . 'https://' . submatch(4) . '.missouri.edu'@g
+```
+
