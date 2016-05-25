@@ -35,7 +35,7 @@ These instructions make several assumptions:
 12. First we need to search and replace any instances of the domain that have been serialized.  Using a text editor that supports regex, do a regex search for 
 
     ```
-    s:\d+:"https?://foo.missouri.edu[^"]*";
+    s:\d+:[\\]?"[^"]*https?://foo.missouri.edu[^"]*";
     ```
 
     replacing `foo` with the domain you are searching for. If there are no matches, skip to step 15.  If there are, continue.  
