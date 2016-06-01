@@ -31,4 +31,4 @@ Need to find the instructions.
 ## Microsoft Edge ##
 Need to find the instructions.  Is it different than IE?
 
-Good resource: [https://support.opendns.com/entries/26336865-Clearing-the-DNS-Cache-on-Computers-and-Web-Browsers](Link URL)
+Good resource: [https://support.opendns.com/entries/26336865-Clearing-the-DNS-Cache-on-Computers-and-Web-Browsers](https://support.opendns.com/entries/26336865-Clearing-the-DNS-Cache-on-Computers-and-Web-Browsers)
