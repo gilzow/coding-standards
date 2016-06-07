@@ -62,3 +62,28 @@ In /wp-includes/ add (or edit, if applicable) an .htaccess file and add the foll
   </IfModule>
 </FilesMatch>
 ```
+
+In both /wp-contents/plugins/ and /wp-contents/themes/ add (or edit, if applicable) an .htaccess file and add the following:
+
+```
+#!bash
+ErrorDocument 403 /404
+
+<IfModule !mod_authz_core.c>
+  Order allow,deny
+  Deny from all
+</IfModule>
+<IfModule mod_authz_core.c>
+  Require all denied
+</IfModule>
+
+<FilesMatch "\.(css|jpg|gif|png|svg|js|jpeg)$">
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Allow from all
+  </IfModule>
+  <IfModule mod_authz_core.c>
+    Require all granted
+  </IfModule>
+</FilesMatch>
+```
