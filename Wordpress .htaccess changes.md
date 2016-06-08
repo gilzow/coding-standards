@@ -73,7 +73,7 @@ RewriteCond %{HTTP_REFERER} !^https?://(www\.)?cellmu-wh-dev\.missouri\.edu/.*$ 
 RewriteRule .* - [F,L]
 
 RewriteCond %{HTTP_REFERER} ^https?://(www\.)?cellmu-wh-dev\.missouri\.edu/.*$ [NC]
-RewriteCond %{REQUEST_URI} !\.(css|js(on)?|jpe?g|gif|png|svg|bmp|eot|ttf|woff|woff2)$ [NC]
+RewriteCond %{REQUEST_URI} !\.(js(on)?|jpe?g|gif|png|svg|bmp|css|eot|ttf|woff|woff2|xml)$ [NC]
 RewriteRule .*  - [F,L]
 
 #if your theme/plugin needs a special exception, comment the above line, uncomment the next line and adjust as needed
