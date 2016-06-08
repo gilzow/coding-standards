@@ -69,21 +69,31 @@ In both /wp-contents/plugins/ and /wp-contents/themes/ add (or edit, if applicab
 #!bash
 ErrorDocument 403 /404
 
-<IfModule !mod_authz_core.c>
-  Order allow,deny
-  Deny from all
-</IfModule>
-<IfModule mod_authz_core.c>
-  Require all denied
-</IfModule>
+RewriteCond %{HTTP_REFERER} !^https?://(www\.)?cellmu-wh-dev\.missouri\.edu/.*$ [NC]
+RewriteRule .* - [F,L]
 
-<FilesMatch "\.(css|jpg|gif|png|svg|js|jpeg)$">
-  <IfModule !mod_authz_core.c>
-    Order allow,deny
-    Allow from all
-  </IfModule>
-  <IfModule mod_authz_core.c>
-    Require all granted
-  </IfModule>
-</FilesMatch>
+RewriteCond %{HTTP_REFERER} ^https?://(www\.)?cellmu-wh-dev\.missouri\.edu/.*$ [NC]
+RewriteCond %{REQUEST_URI} !\.(css|js|jpg|jpeg|gif|png|svg|bmp|eot|ttf|woff|woff2)$ [NC]
+RewriteRule .*  - [F,L]
+#if your theme/plugin needs a special exception, comment the above line, uncomment the next line and adjust as needed
+#RewriteRule !(specialfilename1|specialfilename2)\.php$ - [NC,F,L]
+
+# not needed. keeping for reference
+#<IfModule !mod_authz_core.c>
+#  Order allow,deny
+#  Deny from all
+#</IfModule>
+#<IfModule mod_authz_core.c>
+#  Require all denied
+#</IfModule>
+
+#<FilesMatch "\.(css|jpg|gif|png|svg|js|jpeg)$">
+#  <IfModule !mod_authz_core.c>
+#    Order allow,deny
+#    Allow from all
+#  </IfModule>
+#  <IfModule mod_authz_core.c>
+#    Require all granted
+#  </IfModule>
+#</FilesMatch>
 ```
