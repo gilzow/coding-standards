@@ -75,8 +75,13 @@ RewriteRule .* - [F,L]
 RewriteCond %{HTTP_REFERER} ^https?://(www\.)?cellmu-wh-dev\.missouri\.edu/.*$ [NC]
 RewriteCond %{REQUEST_URI} !\.(css|js|jpg|jpeg|gif|png|svg|bmp|eot|ttf|woff|woff2)$ [NC]
 RewriteRule .*  - [F,L]
+
 #if your theme/plugin needs a special exception, comment the above line, uncomment the next line and adjust as needed
 #RewriteRule !(specialfilename1|specialfilename2)\.php$ - [NC,F,L]
+
+#OR you could add another RewriteCond to do the same thing
+#RewriteCond %{REQUEST_URI} !(specialfilename1|specialfilename2)\.php$
+
 
 # not needed. keeping for reference
 #<IfModule !mod_authz_core.c>
