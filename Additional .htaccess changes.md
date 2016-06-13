@@ -29,10 +29,12 @@ In wp-includes create an .htaccess file and add the following in it
     Require all denied
   </IfModule>
 </FilesMatch>
-<Files wp-tinymce.php>
-  Allow from all
-</Files>
-<Files ms-files.php>
-  Allow from all
-</Files>
+<FilesMatch "^(wp-tinymce|ms-files).php$">
+  <IfModule !mod_authz_core.c>
+    Allow from all
+  </IfModule>
+  <IfModule mod_authz_core.c>
+    Require all granted
+  </IfModule>
+</FilesMatch>
 ```
