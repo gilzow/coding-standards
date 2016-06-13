@@ -20,6 +20,11 @@ order deny,allow
 deny from all
 </Files>
 
+<Files readme.html>
+order deny,allow
+deny from all
+</Files>
+
 #https://www.owasp.org/index.php/List_of_useful_HTTP_headers
 <IfModule mod_headers.c> 
 	Header set X-XSS-Protection "1; mode=block" 
