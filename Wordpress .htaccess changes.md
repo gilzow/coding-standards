@@ -74,12 +74,42 @@ In both /wp-contents/plugins/ and /wp-contents/themes/ add (or edit, if applicab
 #!bash
 ErrorDocument 403 /404
 
-RewriteCond %{HTTP_REFERER} !^https?://(www\.)?cellmu-wh-dev\.missouri\.edu/.*$ [NC]
-RewriteRule .* - [F,L]
+<IfModule !mod_authz_core.c>
+  Order allow,deny
+  Deny from all
+</IfModule>
+<IfModule mod_authz_core.c>
+  Require all denied
+</IfModule>
 
-RewriteCond %{HTTP_REFERER} ^https?://(www\.)?cellmu-wh-dev\.missouri\.edu/.*$ [NC]
-RewriteCond %{REQUEST_URI} !\.(js(on)?|jpe?g|gif|png|svg|bmp|css|eot|ttf|woff|woff2|xml)$ [NC]
-RewriteRule .*  - [F,L]
+<FilesMatch "\.(css|jpe?g|gif|png|svg|js(on)?|bmp|ico|eot|ttf|woff|woff2|xml|pdf)$">
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Allow from all
+  </IfModule>
+  <IfModule mod_authz_core.c>
+    Require all granted
+  </IfModule>
+</FilesMatch>
+
+#example of allowing specific php files that might be needed.
+#<FilesMatch "(sl-xml|store-locator)\.php$">
+#	<IfModule !mod_authz_core.c>
+#		Order allow,deny
+#		allow from all
+#	</IfModule>
+#	<IfModule mod_authz_core.c>
+#		Require all granted
+#	</IfModule>
+#</FilesMatch>
+
+# not needed. keeping for reference
+#RewriteCond %{HTTP_REFERER} !^https?://(www\.)?cellmu-wh-dev\.missouri\.edu/.*$ [NC]
+#RewriteRule .* - [F,L]
+
+#RewriteCond %{HTTP_REFERER} ^https?://(www\.)?cellmu-wh-dev\.missouri\.edu/.*$ [NC]
+#RewriteCond %{REQUEST_URI} !\.(js(on)?|jpe?g|gif|png|svg|bmp|css|eot|ttf|woff|woff2|xml)$ [NC]
+#RewriteRule .*  - [F,L]
 
 #if your theme/plugin needs a special exception, comment the above line, uncomment the next line and adjust as needed
 #RewriteRule !(specialfilename1|specialfilename2)\.php$ - [NC,F,L]
@@ -88,22 +118,4 @@ RewriteRule .*  - [F,L]
 #RewriteCond %{REQUEST_URI} !(specialfilename1|specialfilename2)\.php$
 
 
-# not needed. keeping for reference
-#<IfModule !mod_authz_core.c>
-#  Order allow,deny
-#  Deny from all
-#</IfModule>
-#<IfModule mod_authz_core.c>
-#  Require all denied
-#</IfModule>
-
-#<FilesMatch "\.(css|jpg|gif|png|svg|js|jpeg)$">
-#  <IfModule !mod_authz_core.c>
-#    Order allow,deny
-#    Allow from all
-#  </IfModule>
-#  <IfModule mod_authz_core.c>
-#    Require all granted
-#  </IfModule>
-#</FilesMatch>
 ```
