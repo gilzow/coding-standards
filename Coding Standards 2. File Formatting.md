@@ -8,8 +8,7 @@
 ## 2.3 Code Demarcation (aka PHP Code Tags) ##
 PHP code **MUST** always be delimited by the full-form, standard PHP tags:
 
-```
-#!php5
+```PHP
 <?php
 
 ?>
@@ -20,6 +19,6 @@ This is most portable way to include PHP code on differing operating systems and
 
 * For files that contain only PHP code, the closing tag (?>) **MUST NOT** be used. It is not required by PHP, and omitting it prevents the accidental injection of trailing white space into the response.
 
-**Next**: [Naming Conventions](Coding Standards 3. Naming Conventions)
+**Next**: [Naming Conventions](Coding Standards 3. Naming Conventions.md)
 
-**Previous**: [Conventions](Coding Standards 1. Conventions)
+**Previous**: [Conventions](Coding Standards 1. Conventions.md)
