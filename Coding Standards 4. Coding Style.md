@@ -2,48 +2,39 @@
 ## 4.1 Strings ##
 ### 4.1.1 String Literals ###
 When a string is literal and contains no variable substitutions, a singe quote **SHOULD** be used to demarcate the string.
-```
-#!php5
+```PHP
 <?php
 $strExample = 'some string here';
-?>
 ```
 ### 4.1.2 String Literals containing apostrophes or single quotes ###
 When a literal string contains single quotes/apostrophe, double quotes **SHOULD** be used to demarcate the string.
-```
-#!php5
+```PHP
 <?php
 $strExample = "There's an apostrophe in this string";
-?>
 ```
 ### 4.1.3 Variable Substitution ###
 If the string contains variable substitution, double quotes **SHOULD** be used to demarcate the string.
-```
-#!php5
+```PHP
 <?php
 $strExample = "$strFoo went to $strBar.";
-?>
 ```
 ### 4.1.4 String Concatenation ###
 * Strings **MUST** be concatenated with the "." operator
 * If the string being concatenated exceeds the maximum line length, the string **SHOULD** be broken into multiple lines
     * Each successive line **SHOULD** be indented such that the "." operator is alligned with the "=" operator
 
-```
-#!php5
+```PHP
 <?php
 $strSample = 'The ' . $aryArg[4] . ' ran over to the ' . $aryArg[6] . ' which is next to the ' . $aryArg[8];
 
 $strSecondSample    = 'WARNING: An error occurred at line ' . __LINE__ . ' in function ' . __FUNCTION__ . ' in file '
                     . basename(__FILE__) . ' at ' . date('g:i A') . ' on ' . date('l, F j, Y') .'. Running out of '
                     . 'things to add to this concatenation.';
-?>
 ```
 
 ### 4.1.5 String concatenation vs variable substitution vs sprintf ###
 * Developers ***MAY*** use any method in building strings, but **MUST** be consistent in their code.
-```
-#!php5
+```PHP
 <?php
 //concatenation
 $strFeedURL .='&start='.$aryOptions['start'].'&end='.$aryOptions['end'];
@@ -51,7 +42,6 @@ $strFeedURL .='&start='.$aryOptions['start'].'&end='.$aryOptions['end'];
 $strFeedURL .= "&start={$aryOptions['start']}&end={$aryOptions['end']}";
 //vs sprintf
 $strFeedURL .= sprintf('&start=%s&end=%s',$aryOptions['start'],$aryOptions['end']);
-?>
 ```
 
 ## 4.2 Arrays ##
@@ -62,8 +52,7 @@ $strFeedURL .= sprintf('&start=%s&end=%s',$aryOptions['start'],$aryOptions['end'
     * Alternatively, the initial array item **MAY** begin on the following line:
         * Each line **MUST** be indented one indentation level greater than the line containing the array declaration
         * The closing paren **MUST** be on a line by itself at the same indentation level as the line containing the array declaration
-```
-#!php
+```PHP
 <?php
 $arySample = array(1, 2, 3);
 
@@ -75,7 +64,6 @@ $arySample = array(
     'Deaton', 'Loftin', 'Wallace',
     'Truman', 'Fred', 'George'
 );
-?>
 ```
 
 ### 4.2.2 Associative Arrays ###
@@ -85,8 +73,7 @@ $arySample = array(
 * Alternatively, the initial array item **MAY** begin on the following line.
     * Each successive line **MUST** be indented one indentation level greater than the line containing the array declaration.
     * The closing paren **MUST** be on a line by itself at the same indentation level containing the array declaration.
-```
-#!php
+```PHP
 <?php
 $arySample = array('date'   => 'datevalue',
                    'age'    => 'agevalue');
@@ -95,7 +82,6 @@ $arySample = array(
     'date'  => 'datevalue',
     'age'   => 'agevalue'
 );
-?>
 ```
 
 ## 4.3 Namespaces ##
@@ -109,8 +95,7 @@ $arySample = array(
     * Declarations **MUST** utilize blocks and not single line declarations
     * Opening brace **MUST** be placed on the following line at same level of indentation.
     * Code with the namespace block **MUST** be indented one extra level.
-```
-#!php
+```PHP
 <?php
 namespace Facebook
 {
@@ -121,7 +106,6 @@ namespace Twitter
 {
     // code
 }
-?>
 ```
 
 ### 4.3.2 Import Statements ###
@@ -137,8 +121,7 @@ namespace Twitter
 * Every class **MUST** contain a documentation block that precedes the class declaration.
 * PHP files declaring classes **MUST** contain a single class only.
 
-```
-#!php5
+```PHP
 <?php
 /**
  * Sample class
@@ -147,7 +130,6 @@ class ExampleClass
 {
     // code here
 }
-?>
 ```
 
 ### 4.4.2 Class Member Variables ###
@@ -156,8 +138,7 @@ class ExampleClass
 * Member variables **MUST** declare their visibility by using on of the visibility modifiers: _private_, _protected_, or _public_.
 * _Public_ member visibility **MAY** be used but is discouraged in favor of accessor methods: _set_ and _get_.
 
-```
-#!php5
+```PHP
 <?php
 /**
  * Sample class
@@ -173,7 +154,6 @@ class ExampleClass
 		$this->_setConfigurations($aryOptions);
 	}
 }
-?>
 ```
 
 ## 4.5 Functions/Methods Declaration ##
@@ -182,8 +162,7 @@ class ExampleClass
 * A space **MUST NOT** be inserted between the function/method name and the opening parenthesis for the arguments.
 * Line breaks **MAY** be used if the argument list exceeds the maximum line length
 
-```
-#!php5
+```PHP
 <?php
 /**
  * Sample class
@@ -214,20 +193,17 @@ class ExampleClass
         // code here
     }
 }
-?>
 ```
 
 ## 4.6 Function/Method Usage ##
 * Function/method arguments **MUST** be separated by a single space after the comma delimiter.
 
-```
-#!php5
+```PHP
 <?php
 $arySample = someFunction($aryArg1, $strArg2, $boolArg3);
 
 $objSample = new ExampleClass($arySample);
 $objSample->exampleMethod($aryArg1, $aryArg2);
-?>
 ```
 
 ## 4.7 Control Structures ##
@@ -245,8 +221,7 @@ $objSample->exampleMethod($aryArg1, $aryArg2);
     * The conditions **MUST** be positioned onto the following line, and indented 4 spaces.
     * Logical operators (&&, ||, etc.) **SHOULD** be at the beginning of the line.
 
-```
-#!php5
+```PHP
 <?php
 if(SOME_CONST == $strB){
     $boolA = TRUE;
@@ -270,7 +245,6 @@ if(    is_int($intA)
 ){
     // code here
 }
-?>
 ```
 
 ### 4.7.1 Switch ###
@@ -278,8 +252,7 @@ if(    is_int($intA)
 * Content within each _case_ statement **MUST** be indented one indentation level greater than the case statement.
 * Construct _default_ **MAY** be omitted from a _switch_ statement but **MUST** contain a comment indicating deliberate omission.
 * In the case of fallthrough, code **MUST** include a comment indicating that the omission of _break/return_ was intentional.
-```
-#!php5
+```PHP
 <?php
 switch($intFoo){
     case 1:
@@ -292,26 +265,22 @@ switch($intFoo){
         break;
     // default intentionally omitted.
 }
-?>
 ```
 
 ## 4.7.2 Ternary operators ##
 * Ternary operators **MAY** be used but **MUST** adhere to the same requirements for other control statements.
 * Ternary operators **SHOULD NOT** be nested.
 * Ternary operations **MUST** enclose the condition in parentheses.
-```
-#!php5
+```PHP
 <?php
 $strExample = (empty($strC)) ? $strA : $strB;
-?>
 ```
 
 ## 4.8 Exceptions ##
 * Exceptions **MUST** follow the same conventions as classes.
 * Exceptions **MUST** extend one of PHP's SPL Exception types.
 
-```
-#!php5
+```PHP
 <?php5
 use Exception;
 
@@ -322,7 +291,6 @@ class SampleException extends Exception
 {
     // code here
 }
-?>
 ```
 
 ## 4.9 Inline Documentation ##
@@ -332,8 +300,7 @@ class SampleException extends Exception
     * Single line comments **SHOULD** use C++ style comments (`//`)
     * Multiline comments **MUST** use block comments (C style `/* */`)
 
-```
-#!php5
+```PHP
 <?php
 // single line comment
 
@@ -342,7 +309,6 @@ class SampleException extends Exception
 * nisl tantas invidunt mei ne. Detracto interpretaris ex pri. Qui dicit interpretaris ex. At esse viris pri, sea ei
 * novum erroribus. Brute corrumpit ne eum. Te his hinc adolescens.
 */
-?>
 ```
 
 ### 4.9.2 Files ###
@@ -358,8 +324,7 @@ class SampleException extends Exception
 * File docblocks **MAY** contain:
     * `@subpackage`
 
-```
-#!php5
+```PHP
 <?php
 /**
  * Retrieves events from the Localist instance of the MU calendar and converts them to consumable event objects/arrays
@@ -368,7 +333,6 @@ class SampleException extends Exception
  * @copyright 2014 Curators of the University of Missouri
  * @version 1.1
  */
-?>
 ```
 ### 4.9.3 Classes ###
 * In addition to the file docblock, each class **MUST** have a docblock that contains:
@@ -386,8 +350,7 @@ class SampleException extends Exception
     * Long description
     * `@throws` if the function/method throws an exception
 
-```
-#!php5
+```PHP
 <?php
 	/**
 	 * Converts the date to the format as defined in @see this->aryOptions[date_format]
@@ -400,20 +363,17 @@ class SampleException extends Exception
     {
         // code here
     }
-?>
 ```
 
 ### 4.9.5 Constants ###
 Each constant **SHOULD** have a docblock that contains a short description
 
-```
-#!php5
+```PHP
 <?php
     /**
     * Container should never be smaller than this number.
     */
     const MINSIZE = 50;
-?>
 ```
 
 ### 4.9.6 Variables/members ###
@@ -422,8 +382,7 @@ Each variable/member **SHOULD** have a docblock that contains:
 * Short description
 * `@var` data type
 
-```
-#!php5
+```PHP
 <?php
     /**
      * Valid methods of querying the localist API
@@ -437,9 +396,8 @@ Each variable/member **SHOULD** have a docblock that contains:
 		'keyword'   => 'keyword'
 
 	);
-?>
 ```
 
-**Next**: [Philosophy](Coding Standards 5. Philosophy)
+**Next**: [Philosophy](Coding Standards 5. Philosophy.md)
 
-**Previous**: [Naming Conventions](Coding Standards 3. Naming Conventions)
+**Previous**: [Naming Conventions](Coding Standards 3. Naming Conventions.md)
