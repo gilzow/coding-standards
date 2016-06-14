@@ -4,8 +4,7 @@
 * Filenames **MUST NOT** use spaces.
 * Files that contain php code **SHOULD** end in '.php'.
 
-```
-#!php5
+```PHP
 FrontController.php
 ```
 
@@ -21,22 +20,18 @@ FrontController.php
 * The fully-qualified namespace and class is suffixed with .php when loading from the file system.
 * Alphabetic characters in namespaces and class names may be of any combination of lower case and upper case.
 
-```
-#!php5
+```PHP
 <?php
 namespace Mizzou\CalendarTranslator;
-?>
 ```
 
 ## 3.3 Namespace Aliases ##
 * If aliasing a namespace, you **MUST** use the final segment of the namespace as the alias.
 * If aliasing a class, you **MUST** use the class name as the alias.
 
-```
-#!php5
+```PHP
 <?php
 use Mizzou\CalendarTranslator\CalendarException as CalendarException;
-?>
 ```
 
 ## 3.4 Classes ##
@@ -44,28 +39,24 @@ use Mizzou\CalendarTranslator\CalendarException as CalendarException;
 * Class names **MUST** use StudlyCaps
 * In most cases, class names **SHOULD NOT** contain numbers
 
-```
-#!php5
+```PHP
 <?php
 class ExampleTranslator extends AbstractTranslator
 {
     // code here
 }
-?>
 ```
 
 ## 3.5 Abstract Classes ##
 * Abstract classes **MUST** use the same naming conventions as Classes.
 * Abstract classes **MUST** must being with "Abstract"
 
-```
-#!php5
+```PHP
 <?php
 abstract class AbstractTranslator
 {
     // code here
 }
-?>
 ```
 
 ## 3.6 Interfaces ##
@@ -73,28 +64,24 @@ abstract class AbstractTranslator
 * Interface names **MUST** be nouns or adjectives.
 * Interface names **SHOULD** end with the word "Interface"
 
-```
-#!php5
+```PHP
 <?php
 interface TranslatorInterface
 {
     // code here
 }
-?>
 ```
 
 ### 3.7 Exceptions ##
 * Exception classes **MUST** use the same naming conventions as Classes.
 * Exception classes **MUST** end with the word "Exception".
 
-```
-#!php5
+```PHP
 <?php
 class CalendarException extends Exception
 {
     // code here
 }
-?>
 ```
 
 ## 3.8 Functions and Methods ##
@@ -104,17 +91,14 @@ class CalendarException extends Exception
 * Class methods declared public **MUST NOT** start with an underscore
 * Functions/Methods **MUST** follow camelCaps capitalization
 
-```
-#!php5
+```PHP
 <?php
 function getData()
 {
     //code
 }
-?>
 ```
-```
-#!php5
+```PHP
 <?php
 class ExampleClass
 {
@@ -130,7 +114,6 @@ class ExampleClass
     }
 
 }
-?>
 ```
 
 ## 3.9 Variables ##
@@ -149,8 +132,7 @@ class ExampleClass
     * Resource: rsc/r
     * Mixed: /mxd/m
 
-```
-#!php
+```PHP
 <?php
 //Strings
 $strSomeVar = 'text';
@@ -183,7 +165,6 @@ $rLog       = fopen('data.log','r');
 //Mixed
 $mxdCase    = reset($aryValues);
 $mCase      = reset($aValues);
-?>
 ```
 
 ## 3.10 Constants ##
@@ -192,8 +173,7 @@ $mCase      = reset($aValues);
 * Constants **MUST** be defined as class members with the "const" modifier.
 * Constants **MAY** be defined in the global scope or within namespaces
 Examples
-```
-#!php5
+```PHP
 <?php
 define('EXAMPLE_CONST',true);
 
@@ -201,9 +181,8 @@ class ExampleClass
 {
     const EXAMPLE_CONST = true;
 }
-?>
 ```
 
-**Next**: [Coding Style](Coding Standards 4. Coding Style)
+**Next**: [Coding Style](Coding Standards 4. Coding Style.md)
 
-**Previous**: [File Formatting](Coding Standards 2. File Formatting)
+**Previous**: [File Formatting](Coding Standards 2. File Formatting.md)
