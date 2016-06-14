@@ -13,8 +13,7 @@ separation of components, very similar to the [Model-View-Controller software pa
 * All code **MUST** be E_STRICT-compatible. This means that it must not produce any warnings or errors when PHP's error reporting level is set to E_ALL | E_STRICT.
 * Developers **SHOULD** test again boolean conditions, or conditions that result in a boolean state.
 * Developers **SHOULD NOT** rely on php's type juggling in control structures.
-```
-#!php5
+```PHP
 <?php
 $arySample = functionThatReturnsAnArray();
 
@@ -27,8 +26,7 @@ if($arySample){
 if(is_array($arySample)){
     // code here
 }
-?>
 ```
 
 
-**Previous**: [Coding Style](Coding Standards 4. Coding Style)
+**Previous**: [Coding Style](Coding Standards 4. Coding Style.md)
