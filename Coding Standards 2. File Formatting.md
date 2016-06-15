@@ -2,9 +2,11 @@
 ## 2.1 Indentation ##
 * Indentation **MUST** consist of 4 spaces.
 * Tabs **MUST NOT** be used for indentation.
+
 ## 2.2 Maximum Line Length ##
 * Developers **SHOULD** strive for a target line length of 80 characters.
 * Line lengths **MAY** be up to 120 characters in specific situations.
+
 ## 2.3 Code Demarcation (aka PHP Code Tags) ##
 PHP code **MUST** always be delimited by the full-form, standard PHP tags:
 
