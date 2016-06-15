@@ -130,7 +130,7 @@ class ExampleClass
     * Arrays: ary/a
     * Object: obj/o
     * Resource: rsc/r
-    * Mixed: /mxd/m
+    * Mixed: mxd/m
 
 ```PHP
 <?php
